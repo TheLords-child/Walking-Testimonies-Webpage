@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walking Testimonies Organisation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FAF3E0; /* Opal White */
+            color: #333;
+        }
+
+        header {
+            background-color: #FF5733; /* Sunset Orange */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .header-content img {
+            height: 100px;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #5DCCD4; /* Turquoise Blue */
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: left;
+        }
+
+        section h2 {
+            color: #ff4242; /* Sunset Orange */
+        }
+
+        .verse {
+            margin-top: 20px;
+            font-style: italic;
+            color: #444;
+            text-align: center;
+        }
+
+        .verse p {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        .verse span {
+            display: block;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .core-values, .guiding-principles, .leadership {
+            margin-top: 20px;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .core-values ul, .guiding-principles ul, .leadership ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .core-values li, .guiding-principles li, .leadership li {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #FF5733; /* Sunset Orange */
+        }
+
+        .call-to-action {
+            background-color: #FF5733; /* Sunset Orange */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .call-to-action h3 {
+            margin-bottom: 20px;
+        }
+
+        .call-to-action a {
+            background-color: #5DCCD4; /* Turquoise Blue */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .call-to-action a:hover {
+            background-color: #4C9A9B; /* Darker Turquoise Blue */
+        }
+
+        .programs-section {
+            background-color: #FFFCF6; /* Light Opal White */
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .programs-section h2 {
+            color: #fa613f; /* Sunset Orange */
+        }
+
+        .programs-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .programs-section ul li {
+            font-size: 1.1em;
+            margin: 10px 0;
+            color: #0b0c0c; /* Turquoise Blue */
+        }
+
+        .programs-section h3 {
+            color: #FF5733; /* Sunset Orange */
+        }
+
+        .programs-section ul li strong {
+            color: #FF5733; /* Sunset Orange */
+        }
+
+        footer {
+            background-color: #5DCCD4; /* Turquoise Blue */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .contact-us {
+            background-color: #5DCCD4;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-us h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .contact-us .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .contact-us .contact-item i {
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+
+        .contact-us a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .contact-us a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="Images/Walking Testimonies Organisation Logo V.2.jpg" width="400" height="400" alt="Walking Testimonies Logo">
+            <div>
+                <h1>Welcome to The Walking Testimonies Organisation</h1>
+                <h4>Extending God's hand one life at a time.</h4>
+            </div>
+            <img src="Images/Walking Testimonies Organisation Logo V.2.jpg" width="400" height="400" alt="Walking Testimonies Logo">
+        </div>
+    </header>
+
+    <!-- Header Action Buttons -->
+    <nav>
+        <a href="#about-us">About Us</a>
+        <a href="#programs">Programs</a>
+        <a href="#contact-us">Contact</a>
+    </nav>
+
+    <main>
+        <!-- Aims and Objectives Section -->
+        <section id="about-us">
+            <h2>Aims and Objectives</h2>
+            <p> Curious about what we as an organisation strive to complete? Look below and learn about our mission and vision.</p>
+        </section>
+
+        <section>
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to mobilise the youth of South Africa to actively engage in service projects that will provide relief and support to the poor and homeless.
+            </p>
+            <p>
+                We commit to creating outreach engagements that will assist us in preaching the Gospel, to give and to win souls back to the Kingdom of God, all rooted in the principles of compassion and community.
+            </p>
+            <p>
+                We strive to uplift those in need by embodying the teachings of Jesus Christ, fostering a spirit of generosity, and building lasting relationships within our communities.
+            </p>
+        </section>
+
+        <section>
+            <h2>Our Vision</h2>
+            <p>
+                Our vision is to empower South African youth to become catalysts for change, fostering a society where every individual, regardless of their circumstances, is not restricted access to the Gospel or to basic needs and the support necessary to live a faith life. 
+            </p>
+            <p>
+                We envision communities where hope is restored, lives are transformed, and the love of Christ is reflected in our actions.
+            </p>
+        </section>
+
+        <!-- More About Us Section -->
+        <section id="more-about-us">
+            <h2>More About Us</h2>
+            <p>Learn more about who we are, our leadership, core values, and mission below:</p>
+        </section>
+
+        <section class="leadership">
+            <h2>Meet Our Leadership</h2>
+            <ul>
+                <li><strong>President:</strong> Ayabonga Mbokazi</li>
+                <li><strong>Vice President:</strong> Mnqobi Sithole</li>
+                <li><strong>Secretary:</strong> Nosipho Mbokazi</li>
+                <li><strong>Vice Secretary:</strong> Langelihle Jiane</li>
+                <li><strong>Treasurer:</strong> Gcinamangwane Sangweni</li>
+                <li><strong>Social Media Marketing Officer:</strong> Fezile Mbokazi</li>
+            </ul>
+        </section>
+
+        <section class="core-values">
+            <h2>Our Core Values</h2>
+            <ul>
+                <li>Evangelism</li>
+                <li>Humility</li>
+                <li>Empowerment</li>
+                <li>Community and Unity</li>
+                <li>Integrity</li>
+                <li>Compassion</li>
+            </ul>
+        </section>
+
+        <section class="guiding-principles">
+            <h2>Our Guiding Principles</h2>
+            <ul>
+                <li>Prayer and spiritual guidance</li>
+                <li>Purely Bible-based teaching and outreach</li>
+                <li>Collaboration and Partnership</li>
+                <li>Respect and Dignity for all individuals</li>
+                <li>Accountability and Transparency</li>
+            </ul>
+            <p>
+                By focusing on these values and principles, the organisation shall effectively serve the community, spread the Gospel of Christ, and empower young people to be ambassadors of Christ.
+            </p>
+        </section>
+
+        <!-- Our Programs Section -->
+        <section id="programs">
+            <h2>Our Programs</h2>
+            <p>We are excited to offer a variety of programs that aim to empower the youth, spread the Gospel, and make a positive impact in the lives of those in need. Below are some of our key programs:</p>
+            <ul>
+                <li><strong>Bible Studies:</strong> Engaging in regular Bible study sessions to deepen faith and understanding of the Gospel.</li>
+                <li><strong>Community Outreach:</strong> Participating in projects that help to uplift and support the homeless, poor, and underserved communities.</li>
+                <li><strong>Camps:</strong> Providing spiritual retreats and camps for youth to grow in their faith and develop leadership skills.</li>
+                <li><strong>Scripture Distribution:</strong> Spreading the Word of God through the distribution of Bibles and other Christian literature.</li>
+                <li><strong>Worship Events:</strong> Hosting worship events and services to foster spiritual growth and community bonding.</li>
+                <li><strong>Marches for Christ:</strong> Organizing marches to raise awareness and proclaim the name of Jesus Christ in public spaces.</li>
+            </ul>
+
+            <h3>Benefits of Our Programs</h3>
+            <p>Our programs offer immense value and benefits, including:</p>
+            <ul>
+                <li>Encouraging spiritual growth and a deeper understanding of the Bible.</li>
+                <li>Fostering a sense of community, unity, and compassion among the youth.</li>
+                <li>Building leadership skills and empowering young people to make a positive difference.</li>
+                <li>Providing opportunities for personal growth, service, and outreach to those in need.</li>
+            </ul>
+            <p>These programs have a transformative impact on the lives of young people, helping them live out their faith in practical ways, and making a lasting difference in the world.</p>
+        </section>
+
+        <section class="verse">
+            <p>"Truly I tell you, whatever</p>
+            <p>you did for one of the least</p>
+            <p>of these brothers and sisters of</p>            
+            <p>mine, you did for me."</p>
+            <span>MATTHEW 25:40</span>
+            <p><i>So says the Lord.</i></p>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="call-to-action">
+            <h3>Get Involved with Walking Testimonies</h3>
+            <p>There are many ways to make a difference! Join us in spreading hope, empowering youth, and transforming lives through volunteering, donating, or becoming part of our organization.</p>
+            <a href="#">Volunteer</a>
+            <a href="#">Donate</a>
+            <a href="https://form.jotform.com/250315194850555" target="_blank">Join Us</a>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact-us" class="contact-us">
+            <h2>Contact Us</h2>
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:+27699342605">+27 69 934 2605</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:thewalkingtestimonies@gmail.com">thewalkingtestimonies@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-facebook"></i>
+                <a href="https://www.facebook.com/profile.php?id=61570611031575&mibextid=ZbWKwL" target="_blank">Facebook</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Walking Testimonies. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
